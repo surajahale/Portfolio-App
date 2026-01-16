@@ -47,12 +47,54 @@ h2 {margin-bottom:40px; opacity:0; transform:translateY(20px); transition:all 0.
 .about-image img {width:300px; border-radius:10px;}
 
 /* SKILLS */
-.skills-container {display:flex; gap:20px; flex-wrap:wrap;}
-.skill-card {background:rgba(255,255,255,0.1); padding:20px; border-radius:10px; flex:1; opacity:0; transform:translateY(20px); transition:all 0.8s ease;}
-.skill-item {display:flex; align-items:center; gap:10px; margin:10px 0;}
-.skill-item i {font-size:20px;}
-.skill-bar {background:rgba(255,255,255,0.2); border-radius:5px; margin:5px 0; height:25px; overflow:hidden; position:relative; flex:1;}
-.skill-bar span {display:block; height:100%; background:#00ffd5; width:0; border-radius:5px; line-height:25px; padding-left:10px;}
+.skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.skill-item i {
+    font-size: 20px;
+    width: 25px;
+}
+
+.skill-bar {
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    margin: 5px 0;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    width: 0; /* Start from 0, animate to percent */
+    background: #00ffd5;
+    border-radius: 5px;
+    line-height: 25px;
+    padding-left: 10px;
+    transition: width 1.2s ease;
+}
+
 
 /* PROJECTS (CAROUSEL) */
 /* PROJECTS CAROUSEL WRAPPER */
@@ -87,6 +129,20 @@ h2 {margin-bottom:40px; opacity:0; transform:translateY(20px); transition:all 0.
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0,255,213,0.4);
 }
+.project-links {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.project-links i {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.project-links i:hover {
+    color: #00ffd5;
+}
+
 
 /* CAROUSEL BUTTONS */
 .carousel-btn {
@@ -120,6 +176,103 @@ h2 {margin-bottom:40px; opacity:0; transform:translateY(20px); transition:all 0.
         display: none;
     }
 }
+/* CERTIFICATIONS */
+#certifications {
+    padding: 80px 10%;
+    background: var(--bg-color);
+}
+
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.cert-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.cert-card h3 {
+    color: #00ffd5;
+    margin-bottom: 10px;
+}
+
+.cert-card span {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ACTIVE ANIMATION */
+.cert-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cert-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.cert-card:hover img {
+    transform: scale(1.08);
+}
+
+.cert-card {
+    background: rgba(255,255,255,0.06);
+    padding: 22px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.cert-modal img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+    animation: zoomIn 0.4s ease;
+}
+
+.cert-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 
 
 /* EXPERIENCE TIMELINE */

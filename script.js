@@ -57,21 +57,29 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 faders.forEach(el => appearOnScroll.observe(el));
 
 // ================= SKILL BAR ANIMATION =================
+// Skills progress bar animation
 const skillBars = document.querySelectorAll('.skill-bar');
-skillBars.forEach(bar => {
-    const span = bar.querySelector('span');
-    const percent = bar.getAttribute('data-percent');
 
-    const observer = new IntersectionObserver(entries => {
+const skillObserver = new IntersectionObserver(
+    entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                const bar = entry.target;
+                const span = bar.querySelector('span');
+                const percent = bar.getAttribute('data-percent');
+
                 span.style.width = percent + '%';
+
+                // Stop observing after animation
+                skillObserver.unobserve(bar);
             }
         });
-    }, { threshold: 0.5 });
+    },
+    { threshold: 0.5 }
+);
 
-    observer.observe(bar);
-});
+skillBars.forEach(bar => skillObserver.observe(bar));
+
 
 // ================= DARK / LIGHT MODE =================
 const themeToggle = document.getElementById('themeToggle');
@@ -191,3 +199,31 @@ if (carousel && nextBtn && prevBtn) {
         carousel.scrollLeft = scrollLeft - walk;
     });
 }
+
+// Certification scroll animation
+const certCards = document.querySelectorAll(".cert-card");
+
+const certObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+certCards.forEach(card => certObserver.observe(card));
+// Certificate Image Popup
+const modal = document.getElementById("certModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".cert-modal .close");
+
+document.querySelectorAll(".cert-card img").forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+modal.onclick = () => modal.style.display = "none";
+

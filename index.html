@@ -6,6 +6,8 @@
 <title>Suraj Ahale | Portfolio</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="images/iocn.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,6 +23,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -49,7 +52,7 @@
     </div>
     <div class="hero-social">
         <a href="https://github.com/surajahale"  target="_blank"><i class="fab fa-github"></i></a>
-        <a href=="https://www.linkedin.com/in/suraj-ahale-1230a420b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/suraj-ahale-1230a420b/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
 </section>
@@ -69,8 +72,104 @@
         </div>
     </div>
 </section>
-
 <!-- SKILLS -->
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="slide-in">Skills</h2>
+
+    <div class="skills-container fade-in">
+
+        <!-- Frontend -->
+        <div class="skill-card">
+            <h3>Frontend</h3>
+
+            <div class="skill-item">
+                <i class="fab fa-html5"></i> HTML
+                <div class="skill-bar" data-percent="90">
+                    <span>90%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i> CSS
+                <div class="skill-bar" data-percent="85">
+                    <span>85%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-js"></i> JavaScript
+                <div class="skill-bar" data-percent="80">
+                    <span>80%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fab fa-react"></i> React
+                <div class="skill-bar" data-percent="70">
+                    <span>70%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card">
+            <h3>Backend</h3>
+
+            <div class="skill-item">
+                <i class="fab fa-java"></i> Java
+                <div class="skill-bar" data-percent="85">
+                    <span>85%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-database"></i> MySQL
+                <div class="skill-bar" data-percent="80">
+                    <span>80%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-server"></i> JDBC / Servlets
+                <div class="skill-bar" data-percent="70">
+                    <span>70%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="skill-card">
+            <h3>Tools & Others</h3>
+
+            <div class="skill-item">
+                <i class="fab fa-github"></i> Git & GitHub
+                <div class="skill-bar" data-percent="85">
+                    <span>85%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-bug"></i> Software Testing
+                <div class="skill-bar" data-percent="70">
+                    <span>70%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <i class="fas fa-network-wired"></i> Networking (CCNA)
+                <div class="skill-bar" data-percent="65">
+                    <span>65%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- PROJECTS -->
 <section id="projects">
     <h2 class="slide-in">Projects</h2>
 
@@ -78,62 +177,102 @@
         <button class="carousel-btn left" id="prevBtn">&#10094;</button>
 
         <div class="projects-carousel" id="projectCarousel">
+
             <div class="project-card">
                 <h3>Blood Donation Management System</h3>
-                <br>
-                <p>Feb 2025 Worked on a pan-India blood donation platform, building responsive UI, core modules, and state-wise blood availability tracking.</p>
-                <br>
-                <p><b>Tech :-</b> HTML, CSS, JS, Java, MySQL</p>
+                <p>Feb 2025 – Pan-India blood donation platform with responsive UI and state-wise availability.</p>
+                <p><b>Tech:</b> HTML, CSS, JS, Java, MySQL</p>
+
+                <div class="project-links">
+                    <a href="https://www.raktam.com/" target="_blank" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
+
             <div class="project-card">
                 <h3>Weather App</h3>
-                <br>
-                <p>Real-time weather info using API integration.</p>
-                <br>
-                <p><b>Tech :-</b>  HTML, CSS, JS</p>
+                <p>Real-time weather information using API integration.</p>
+                <p><b>Tech:</b> HTML, CSS, JS</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/surajahale/Weather-App.git" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
+
             <div class="project-card">
-                <h3>Student Management System</h3>
-                <br>
-                <p>Built a Student Management System enabling student registration.</p>
-                <br>
-                <p><b>Tech :-</b> HTML, CSS, JS, Java, MySQL</p>
+                <h3>Student Placement Tracker</h3>
+                <p>Student Placement  and academic record management.</p>
+                <p><b>Tech:</b> HTML, CSS, JS, Java, MySQL</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/surajahale/Student-Placement-Tracker.git" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
+
             <div class="project-card">
                 <h3>Student Housing System</h3>
-                <br>
-                <p> Created a platform for managing student accommodations.</p>
-                <br>
-                <p><b>Tech :-</b> HTML, CSS, JS, Java, MySQL</p>
+                <p>Platform for managing student accommodations.</p>
+                <p><b>Tech:</b> HTML, CSS, JS, Java, MySQL</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/surajahale/Student_housing_System.git" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
+
         </div>
 
         <button class="carousel-btn right" id="nextBtn">&#10095;</button>
     </div>
 </section>
 
-<!-- PROJECTS (CAROUSEL) -->
-<!-- <section id="projects">
-    <h2 class="slide-in">Projects</h2>
-    <div class="projects-carousel fade-in">
-        <div class="project-card">
-            <h3>Weather App</h3>
-            <p>Real-time weather info with API integration.</p>
+
+
+<!-- CERTIFICATIONS -->
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <h2 class="slide-in">Certifications</h2>
+
+    <div class="cert-container fade-in">
+
+        <div class="cert-card">
+            <img src="images/image.png" alt="Advanced SQL Certificate">
+            <h3>Advanced SQL – HackerRank</h3>
+            <p>Joins, subqueries & performance optimization</p>
+            <span>2024</span>
         </div>
-        <div class="project-card">
-            <h3>Student Management System</h3>
-            <p>Manage student data with CRUD operations.</p>
+
+        <div class="cert-card">
+            <img src="images/script.png" alt="JavaScript Certificate">
+            <h3>JavaScript Basic – HackerRank</h3>
+            <p>Core JS, DOM, ES6 fundamentals</p>
+            <span>2024</span>
         </div>
-        <div class="project-card">
-            <h3>Cake Booking System</h3>
-            <p>Online cake ordering & booking system.</p>
+
+        <div class="cert-card">
+            <img src="images/network.png" alt="CCNA Certificate">
+            <h3>CCNA – Routing & Switching</h3>
+            <p>Networking fundamentals & protocols</p>
+            <span>2023</span>
         </div>
-        <div class="project-card">
-            <h3>Health Tracker</h3>
-            <p>Monitor health metrics and visualize progress.</p>
+
+        <div class="cert-card">
+            <img src="images/java.png" alt="Java Certificate">
+            <h3>Java Programming – Great-learning</h3>
+            <p>Core java & project-based learning</p>
+            <span>2024</span>
         </div>
+
     </div>
-</section> -->
+</section>
+
+
 
 <!-- EXPERIENCE TIMELINE -->
 <section id="experience">
@@ -190,6 +329,8 @@
         <div class="social-links">
             <a href="https://github.com/surajahale" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/suraj-ahale-1230a420b/" target="_blank">LinkedIn</a>
+           <a href="mailto:surajahale@gmail.com">Gmail</a>
+
         </div>
     </div>
 </section>
@@ -198,6 +339,34 @@
     <p>&copy; 2026 Suraj Ahale | All Rights Reserved</p>
 </footer>
 
-<script src="script.js"></script>
+<div class="cert-modal" id="certModal">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+</div>
+<script src="script.js">
+    // Animate skills progress bars
+const skillBars = document.querySelectorAll('.skill-bar');
+
+const skillObserver = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const span = bar.querySelector('span');
+                const percent = bar.getAttribute('data-percent');
+
+                span.style.width = percent + '%';
+
+                // Stop observing after animation
+                skillObserver.unobserve(bar);
+            }
+        });
+    },
+    { threshold: 0.5 }
+);
+
+skillBars.forEach(bar => skillObserver.observe(bar));
+
+</script>
 </body>
 </html>
